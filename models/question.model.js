@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 let Question = new Schema({
   nameTest: String,
+  dateUpdate: Number,
   questions: [
     {
       nameQuestion: String,
