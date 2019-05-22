@@ -8,7 +8,8 @@ let Result = new Schema({
   answers: [Object],
   date: String,
   done: { type: Boolean, default: false },
-  userId: String
+  userId: String,
+  dateUpdate: Number
 });
 
 module.exports = mongoose.model("Result", Result);

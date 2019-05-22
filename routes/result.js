@@ -69,6 +69,7 @@ resultRoutes.route("/update/:id").post(function(req, res) {
       result.date = req.body.date;
       result.done = req.body.done;
       result.userId = req.body.userId;
+      result.dateUpdate = req.body.dateUpdate;
     }
 
     result
