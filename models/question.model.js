@@ -7,6 +7,7 @@ let Question = new Schema({
     {
       nameQuestion: String,
       descriptionQuestion: String,
+      typeInput: String,
       asks: [
         {
           nameAsk: String,
