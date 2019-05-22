@@ -89,9 +89,12 @@ userRoutes.route("/update/:id").post(function(req, res) {
     else user.name = req.body.name;
     user.surname = req.body.surname;
     user.rodneCislo = req.body.rodneCislo;
-    user.password = req.body.password;
     user.typeUser = req.body.typeUser;
     user.selectTest = req.body.selectTest;
+
+    var salt = bcrypt.genSaltSync(saltRounds);
+    var hash = bcrypt.hashSync(req.body.password, salt);
+    user.password = hash
 
     user
       .save()
